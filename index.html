@@ -1,0 +1,27 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Practice Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <h1>MOOOOVIES!</h1>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <div v-for="movie in movies">
+      <p>{{ movie }}</p>
+    </div>
+    <div>
+      <button v-on:click="createNewMovie">Create New Movie</button>
+      <input type="text" v-model="newMovie">
+    </div>
+    <div>
+      <img v-if="movies.includes('Zoolander')" src="https://pbs.twimg.com/profile_images/652555583623704576/BY63K23__400x400.jpg" alt="zoolander dude">
+    </div>
+  </div>
+</body>
+</html>
